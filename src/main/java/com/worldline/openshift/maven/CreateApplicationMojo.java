@@ -5,8 +5,9 @@ import com.openshift.client.IApplication;
 import com.openshift.client.IDomain;
 import com.openshift.client.IOpenShiftConnection;
 import com.openshift.client.IUser;
-import com.openshift.internal.client.Cartridge;
+import com.openshift.client.cartridge.StandaloneCartridge;
 import com.openshift.internal.client.GearProfile;
+
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
@@ -45,7 +46,7 @@ public class CreateApplicationMojo extends BaseApplicationMojo {
         }
 
         final IApplication app = userDomain.createApplication(application,
-                                                              new Cartridge(cartridge),
+                                                              new StandaloneCartridge(cartridge),
                                                               ApplicationScale.valueOf(scale.toUpperCase()),
                                                               new GearProfile(gearProfile));
         getLog().info("Created application '" + app.getName() + "'");

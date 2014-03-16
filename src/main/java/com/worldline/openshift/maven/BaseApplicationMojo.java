@@ -2,7 +2,7 @@ package com.worldline.openshift.maven;
 
 import com.openshift.client.IApplication;
 import com.openshift.client.IDomain;
-import com.openshift.client.IEmbeddedCartridge;
+import com.openshift.client.cartridge.IEmbeddedCartridge;
 import com.openshift.client.IOpenShiftConnection;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Parameter;

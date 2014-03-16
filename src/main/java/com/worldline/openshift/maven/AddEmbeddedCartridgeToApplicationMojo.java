@@ -1,6 +1,6 @@
 package com.worldline.openshift.maven;
 
-import com.openshift.client.EmbeddableCartridge;
+import com.openshift.client.cartridge.EmbeddableCartridge;
 import com.openshift.client.IApplication;
 import com.openshift.client.IOpenShiftConnection;
 import org.apache.maven.plugin.MojoExecutionException;
